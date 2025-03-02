@@ -1,30 +1,93 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Islam Is The Truth</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Styles for Enhanced Visuals and Animations */
+        body {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-section {
+            position: relative;
+            overflow: hidden; /* Ensures the wave doesn't overflow */
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px; /* Adjust height as needed */
+            background: url('data:image/svg+xml,%3Csvg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%%3E%3Cpath d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: %23ffffff;"%3E%3C/path%3E%3C/svg%3E');
+            background-size: cover;
+            animation: waveAnimation 8s linear infinite; /* Adjust speed as needed */
+        }
+
+        @keyframes waveAnimation {
+            0% {
+                background-position: 0 bottom;
+            }
+            100% {
+                background-position: 100% bottom;
+            }
+        }
+
+        .benefit-item {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .benefit-item:hover {
+            transform: scale(1.05);
+        }
+
+        .join-button {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+            }
+            70% {
+                transform: scale(1.1);
+                box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            }
+        }
+    </style>
 </head>
 <body class="bg-gradient-to-b from-blue-700 to-blue-400 text-white">
     
     <!-- Hero Section -->
-    <section class="text-center py-16">
-        <h1 class="text-4xl font-bold">🌟 ISLAM IS THE TRUTH 🌟</h1>
+    <section class="text-center py-16 hero-section">
+        <h1 class="text-4xl font-bold animate-pulse">🌟 ISLAM IS THE TRUTH 🌟</h1>
         <p class="mt-4 text-lg">Join our community to deepen your Islamic knowledge</p>
         <div class="mt-6">
-            <img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mosque" class="mx-auto w-40">
+            <img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mosque" class="mx-auto w-40 rounded-full shadow-lg">
         </div>
+        <div class="wave"></div>
     </section>
     
     <!-- Benefits Section -->
     <section class="text-center bg-white text-gray-900 py-12 px-4 rounded-lg shadow-lg mx-6">
         <h2 class="text-2xl font-semibold">What You'll Gain</h2>
         <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <p>✨ Inspiring Islamic quotes and reminders</p>
-            <p>✨ Quranic reflections and explanations</p>
-            <p>✨ Islamic advice and guidance</p>
-            <p>✨ Community discussions and Q&A</p>
+            <p class="benefit-item">✨ Inspiring Islamic quotes and reminders</p>
+            <p class="benefit-item">✨ Quranic reflections and explanations</p>
+            <p class="benefit-item">✨ Islamic advice and guidance</p>
+            <p class="benefit-item">✨ Community discussions and Q&A</p>
         </div>
     </section>
     
@@ -38,12 +101,13 @@
     <section class="text-center py-12 px-4">
         <h2 class="text-2xl font-semibold">Join Our WhatsApp Channel</h2>
         <p class="mt-4">Stay connected and learn more about Islam.</p>
-        <a href="https://whatsapp.com/channel/0029Vb84OCPEKyZH6asVYK19" class="mt-6 inline-block bg-white text-blue-700 font-bold py-2 px-6 rounded-lg shadow-lg">Join Now</a>
+        <a href="https://whatsapp.com/channel/0029Vb84OCPEKyZH6asVYK19" class="mt-6 inline-block bg-white text-blue-700 font-bold py-2 px-6 rounded-lg shadow-lg join-button">Join Now</a>
     </section>
     
     <!-- Footer -->
     <footer class="text-center py-6 text-sm bg-blue-800">
         📚 Gain knowledge, enrich your faith 📚
+        <p class="mt-2">Developed by AQDEV</p>
     </footer>
     
 </body>
